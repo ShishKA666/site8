@@ -1,0 +1,311 @@
+*{
+    box-sizing: border-box;
+}
+
+body,h1,h2,p,form{
+    margin: 0px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.container{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+header{
+    background-image: url(img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0px;
+    position: relative;
+    z-index: 1;
+}
+
+.header-content h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.header-content hr{
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.header-content p{
+    width: 550px;
+    text-align: justify;
+    text-transform: uppercase;
+    line-height: 25px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.header-content button{
+    background-color: transparent;
+    border: 3px white solid;
+    padding: 20px 35px;
+    color: white;
+    vertical-align: top;
+    margin-left: 60px;
+    font-size: 16px;
+}
+
+.header-content{
+    
+}
+
+.cover{
+    background-color: rgba(14%,16%,26%,0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+/*------------------------------------Gallery--------------------------------------*/
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,400px);
+}
+
+.item{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item:nth-child(1){
+    background-image: url(img/pic01.jpg);
+}
+
+.item:nth-child(2){
+    background-image: url(img/pic02.jpg);
+    grid-column: span 2;
+}
+
+.item:nth-child(3){
+    background-image: url(img/pic03.jpg);
+    grid-column: span 2;
+}
+
+.item:nth-child(4){
+    background-image: url(img/pic04.jpg);
+}
+
+.item:nth-child(5){
+    background-image: url(img/pic05.jpg);
+}
+
+.item:nth-child(6){
+    background-image: url(img/pic06.jpg);
+    grid-column: span 2;
+}
+
+.cover1{
+    background-color: rgba(130,239,211,0.6);
+}
+
+.cover2{
+    background-color: rgba(188,130,239,0.6);
+    
+}
+
+.cover3{
+    background-color: rgba(254,121,103,0.6);
+}
+
+.cover4{
+    background-color: rgba(254,197,103,0.6);
+}
+
+.cover5{
+    background-color: rgba(103,151,254,0.6);
+}
+
+.cover6{
+    background-color: rgba(27,255,0,0.6);
+}
+
+.item-cover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: ease 0.3s;
+}
+
+.item-cover:hover{
+    opacity: 0;
+    background-color: rgba(14%,16%,26%,0);
+}
+
+.item{
+    position: relative;
+}
+
+.item-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+}
+
+.item-content h2{
+    font-size: 45px;
+}
+
+.item-content hr{
+    border: 3px white solid;
+    width: 330px;
+}
+
+
+/*-----------------------------About me----------------------------------*/
+
+.about-me{
+    background-color: #333579;
+    padding-top: 60px;
+    height: 450px;
+}
+
+.about-me .container{
+    margin: 0 auto;
+}
+
+.about-me h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+.about-me hr{
+    border: 2px white solid;
+}
+
+.about-me p{
+    font-size: 15px;
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+.about-me button{
+    background-color: transparent;
+    border: 3px white solid;
+    padding: 20px 35px;
+    color: white;
+    vertical-align: top;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/*-------------------------------------Feedback------------------------------*/
+
+.feedback{
+    background-color: #27295D;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.feedback form{
+    display: grid;
+    grid-template-areas: 
+        "name-l email-l"
+        "name email"
+        "message-l ."
+        "message message"
+        "button .";
+    grid-template-rows: minmax(auto,auto) 50px minmax(auto,auto) 150px 50px;
+}
+
+#name-l{
+    grid-area: name-l;
+}
+
+#email-l{
+    grid-area: email-l;
+}
+
+#message-l{
+    grid-area: message-l;
+}
+
+#name{
+    grid-area: name;
+}
+
+#email{
+    grid-area: email;
+}
+
+#message{
+    grid-area: message
+}
+
+form button{
+    grid-area: button;
+}
+
+.feedback h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.feedback hr{
+    border: 2px white solid;
+    margin-bottom: 35px;
+}
+
+form{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 15px;
+}
+
+form label{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+form input{
+    background-color: #373973;
+    outline: none;
+    border: 1px #373973 solid;
+    margin-right: 15px;
+    color: white;
+}
+
+form textarea{
+    background-color: #373973;
+    border: none;
+    resize: none;
+}
+
+form button{
+    margin-top: 10px;
+    background-color: white;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+button{
+    transition-duration: 0.3s;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
